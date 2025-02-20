@@ -8,14 +8,25 @@ print("(Visamos o bem-estar do usuário)")
 user = input("Digite seu nome: ")
 print("")
 print(f"Olá {user}!")
-altura = float(input("Qual a sua altura? (Digite cada parametro usando o '.' para casas decimais nos números.) "))
+while True:
+    try:
+        altura = float(input("Qual a sua altura? (Digite cada parametro usando o '.' para casas decimais nos números.) "))
+        break
+    except ValueError:
+        print("\nDigite um valor válido.")
 
-peso = float(input("Qual o seu peso? "))
+while True:
+    try:
+        peso = float(input("\nQual o seu peso? "))
+        break
+    except ValueError:
+        print("\nDigite um valor válido.")
+
 
 imc = peso / (altura * altura)
 
 if imc < 18.5:
-    print(f"Seu IMC e {imc:.2f}")
+    print(f"\nSeu IMC e {imc:.2f}")
     imc = print("Magreza")
     orientacao = "Você precisa se alimentar melhor."
 elif imc >= 18.5 and imc < 25:
@@ -35,3 +46,18 @@ else:
     imc = print("Obesidade grave")
 
 print(orientacao)
+print("")
+while True:
+    try:
+        perg1 = int(input("\nVocê se exercita regularmente? (Digite '1' para 'sim' ou '2' para 'não'): "))
+        if perg1 in [1, 2]:
+            break
+        else:
+            print("\nPor favor, digite '1' para 'sim' ou '2' para 'não'.")
+    except ValueError:
+        print("\nPor favor, digite '1' para 'sim' ou '2' para 'não'.")
+
+if perg1 == 1:
+    print("Parabéns! Continue assim.")
+else:
+    print("Procure se exercitar mais.")
