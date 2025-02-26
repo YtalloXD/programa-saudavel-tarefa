@@ -46,6 +46,6 @@ print("\nTenha um ótimo dia!")
 # Nomes dos membros da equipe que contribuiu com o trabalho abaixo:
 membro1 = "Reginaldo Ytalo Félix Mota"
 membro2 = "Paulo André Santos Queiroz"
-membro3 = "João Luis"
+membro3 = "João Luis Gomes Torres"
 
 print(f"\nMade by: {membro1}, {membro2} e {membro3}. \n All Rights Reserved - 2025")
